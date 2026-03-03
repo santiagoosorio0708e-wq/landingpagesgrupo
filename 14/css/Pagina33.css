@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 80px 40px;
+}
+
+.hero-section {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* LADO IZQUIERDO */
+.content-container {
+    flex: 1;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    color: #333;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.main-text {
+    color: #666;
+    max-width: 400px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.btn-get-started {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+/* SELLOS CIRCULARES */
+.badges-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.badge-item {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-blue { background-color: #d1e8e2; }
+.bg-orange { background-color: #ffdca2; }
+.bg-pink { background-color: #f7d9e3; }
+
+.badge-text {
+    font-size: 10px;
+    text-transform: lowercase;
+    fill: #333;
+    letter-spacing: 1px;
+}
+
+.badge-item .icon {
+    position: absolute;
+    font-size: 1.2rem;
+}
+
+/* FOOTER IZQUIERDO */
+.info-footer {
+    display: flex;
+    gap: 30px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.info-box strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+/* GRID DE IMÁGENES (DERECHA) */
+.gallery-grid {
+    flex: 2;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 20px;
+}
+
+.grid-img {
+    width: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    border: 4px solid #eee;
+}
+
+.img-tall { height: 280px; }
+.img-small { height: 220px; }
+
+/* Efecto de escalonado para el grid */
+.gallery-grid img:nth-child(2) { margin-top: 40px; }
+.gallery-grid img:nth-child(3) { margin-top: -40px; }
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .hero-section { flex-direction: column; }
+    .gallery-grid { width: 100%; }
+}
